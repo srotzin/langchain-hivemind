@@ -1,0 +1,10 @@
+langchain-core>=0.3.0
+requests>=2.28.0
+
+[dev]
+pytest>=7.0
+pytest-mock>=3.0
+responses>=0.23
+
+[langgraph]
+langgraph>=0.2.0

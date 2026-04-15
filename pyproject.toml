@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=67.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-hivemind"
+version = "0.1.0"
+description = "LangChain integration for HiveMind — persistent encrypted memory, bounties, and USDC economy for AI agents"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Hive Civilization", email = "srotzin@me.com"}]
+keywords = [
+    "langchain",
+    "langgraph",
+    "agent",
+    "memory",
+    "hivemind",
+    "usdc",
+    "bounty",
+    "ai",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "langchain-core>=0.3.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+langgraph = ["langgraph>=0.2.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-mock>=3.0",
+    "responses>=0.23",
+]
+
+[project.urls]
+Homepage = "https://hiveforge-lhu4.onrender.com"
+Repository = "https://github.com/srotzin/langchain-hivemind"
+Documentation = "https://hiveforge-lhu4.onrender.com/.well-known/ai.json"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["langchain_hivemind*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
